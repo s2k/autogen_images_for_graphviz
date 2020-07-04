@@ -1,0 +1,55 @@
+digraph {
+  size="40";
+  bgcolor="transparent";
+  rankdir = TD;
+
+  node [fontname="Verdana",shape=rectangle, style="rounded,filled,solid", fillcolor=lightgrey, color=black];
+  edge [fontname="courier", fontcolor=red];
+ 
+  
+      Q0[ label = "Precondition check\nparam = 0" ];
+      Q1[ label = "Input: ⍺, β" ];
+      Q3[ label = "Enter property" ];
+      Q5[ label = "ZZ9PlZ⍺ is…" ];
+      Q6[ label = "What was the ZZ9PlZ⍺?" ];
+      Q7[ label = "Size of ƒ3_z?" ];
+      Q8[ label = "Value of µ-2" ];
+      Q9[ label = "Any of…?" ];
+      Q10[ label = "What about…?" ];
+      Q11[ label = "Is DEF?" ];
+
+      BE [ label = "Sad End" ];
+      HE [ label = "Happy End"];
+ 
+  
+      Q0 -> Q1 [ label = "true\nparam -= 2" ];
+      Q0 -> Q1 [ label = "false\nparam += 1" ];
+ 
+      Q1 -> Q3 [ label = "via transformation\n param += f(⍺,β)" ];
+
+      Q3 -> BE [ label = "< 10 units" ];
+      Q3 -> Q5 [ label = "10 to 20 units" ];
+      Q3 -> Q5 [ label = "> 20 units" ];
+      Q5 -> Q6 [ label = "foo" ];
+      Q5 -> Q7 [ label = "bar" ];
+      Q6 -> Q7 [ label = "≤ X\nparam =- 3.14" ];
+      Q6 -> Q7 [ label = "> X .. ≤ Y\n param += 0" ];
+      Q6 -> Q7 [ label = "> Y .. < Z\n param += 1.618" ];
+      Q6 -> BE [ label = "≥ Z" ];
+      Q7 -> BE [ label = "0" ];
+      Q7 -> Q8 [ label = "1-9" ];
+      Q7 -> Q8 [ label = "> 9" ];
+      Q8 -> Q9 [ label = "≤ 6 parsec\nparam =- 2.5" ];
+      Q8 -> Q9 [ label = "6 < x ≤ 12 parsec\nparam =+ 0" ];
+      Q8 -> Q9 [ label = "> 12 parsec\nparam =+ 5.34" ];
+      Q9 -> BE [ label = "tired" ];
+      Q9 -> BE [ label = "sleepy" ];
+      Q9 -> Q10 [ label = "fresh as a daisy" ];
+      Q9 -> Q11 [ label = "Neither" ];
+      Q10 -> Q11 [ label = "happy" ];
+      Q10 -> Q11 [ label = "delighted" ];
+      Q10 -> BE [ label = "miserable" ];
+      Q11 -> BE [ label = "gloomy" ];
+      Q11 -> HE [ label = "cheerful" ];
+
+ }
