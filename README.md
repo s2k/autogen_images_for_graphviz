@@ -1,4 +1,4 @@
-# autogen_images_for_graphviz
+# Autogenerate Images For Graphviz Using Guard
 
 Well, automatically generate image files from GraphViz files
 
